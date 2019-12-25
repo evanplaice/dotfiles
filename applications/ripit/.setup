@@ -1,0 +1,2 @@
+sudo apt-get -y install ripit
+sudo apt-get -y install lame

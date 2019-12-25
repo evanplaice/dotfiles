@@ -1,0 +1,6 @@
+[user]
+	name = Evan Plaice
+	email = evanplaice@gmail.com
+[push]
+	default = matching
+	followTags = true

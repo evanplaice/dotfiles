@@ -1,0 +1,2 @@
+# Preview a local webserver in Chromium
+alias preview='chromium-browser http://localhost:3000/'

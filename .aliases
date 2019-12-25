@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+
+###############################################################################
+# Files                                                                       #
+###############################################################################
+
+# mv
+alias mv='mv -v'
+
+# rm
+alias rm='rm -i -v'
+
+# cp
+alias cp='cp -v'
+
+# file size
+alias fs="stat -f \"%z bytes\""
+
+# open
+alias open="xdg-open"
+
+# disk space
+alias diskspace="df -P -kHl"
+
+# Compare (ie diff) the contents of 2 directories
+#   https://unix.stackexchange.com/questions/57305/rsync-compare-directories
+compare() {
+	SOURCE="$1"; shift
+	DESTINATION="$1"; shift
+	OPTIONS="$*"
+
+	# Files that don't exist in Destination dir
+	rsync $OPTIONS -rin --ignore-existing "$SOURCE"/ "$DESTINATION"/ | sed -e 's/^[^ ]* /->  /'
+	# Files that don't exist in Source Dir
+	rsync $OPTIONS -rin --ignore-existing "$DESTINATION"/ "$SOURCE"/ | sed -e 's/^[^ ]* /<-  /'
+	# Files that exist in both but have differences
+	rsync $OPTIONS -rin --existing "$SOURCE"/ "$DESTINATION"/ | sed -e 's/^[^ ]* /!=  /'
+}
+
+# Camoflage a zip file as an image
+#
+# ex `camo [image] [source] [dest]`
+camo() {
+	IMAGE="$1"; shift
+	SOURCEDIR="$1"; shift
+	DESTINATION="$1"
+
+	zip -r - "$SOURCEDIR" | cat "$IMAGE" - > "$DESTINATION" 
+}
+
+
+###############################################################################
+# Navigation                                                                  #
+###############################################################################
+
+# up one
+alias ..="cd .."
+
+# up two
+alias ...="cd ../.."
+
+# up three
+alias ....="cd ../../.."
+
+# up four
+alias .....="cd ../../../.."
+
+# home
+alias ~="cd ~"
+
+# back
+alias -- -="cd -"
+
+
+###############################################################################
+# Networking                                                                  #
+###############################################################################
+
+# ip address (public)
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# dig (dns)
+alias dig="dig +nocmd any +multiline +noall +answer"
+
+# edit 'hosts'
+alias hosts='sudo $EDITOR /etc/hosts'
+
+
+###############################################################################
+# OS Specific                                                                 #
+###############################################################################
+
+# Set the number of virtual workspaces
+alias workspaces='gsettings set org.gnome.desktop.wm.preferences num-workspaces'
+
+
+###############################################################################
+# Application Specific Aliases                                                #
+###############################################################################
+
+# Kill all running Node.JS processes
+alias killnode='lsof -i | grep 'node' | cut -c11-15 | xargs kill -9'
+
+# Start a pomodoro timer
+alias pomo='npx pomo -60 --quiet'
+

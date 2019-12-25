@@ -1,0 +1,2 @@
+sudo add-apt-repository -y ppa:philip.scott/elementary-tweaks
+sudo apt install -y elementary-tweaks

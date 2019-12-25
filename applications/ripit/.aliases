@@ -1,0 +1,2 @@
+# Rip the current CD in the drive (FLAC encoding)
+alias rip='ripit --nointeraction --outputdir $HOME/Music --coder=2'
