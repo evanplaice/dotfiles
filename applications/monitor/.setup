@@ -1,1 +1,1 @@
-sudo snap install gnome-system-monitor
+sudo apt install -y com.github.stsdc.monitor

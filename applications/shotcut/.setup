@@ -1,1 +1,1 @@
-sudo snap install shotcut --classic
+sudo flatpak install --noninteractive org.shotcut.Shotcut

@@ -1,3 +1,4 @@
+.temp/
 .vagrant/
-install.log
 errors.log
+install.log

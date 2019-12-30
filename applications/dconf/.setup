@@ -1,1 +1,1 @@
-sudo apt-get -y install dconf-tools
+sudo flatpak install --noninteractive flathub ca.desrt.dconf-editor

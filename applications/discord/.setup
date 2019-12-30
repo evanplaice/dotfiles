@@ -1,1 +1,1 @@
-sudo snap install discord
+sudo flatpak install --noninteractive flathub com.discordapp.Discord

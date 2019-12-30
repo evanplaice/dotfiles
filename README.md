@@ -3,7 +3,7 @@ Dotfiles
 
 ## Description
 
-Dotfiles comes in many forms. Ranging from a few scripts to custom frameworks. This one attempts to keep things simple. The dotfiles themselves represent the different steps of the installation/configuration process.
+Dotfiles come in many forms. Ranging from a few scripts to custom frameworks. This one attempts to keep things simple. The dotfiles themselves represent the different steps of the installation/configuration process.
 
 *Top-Level*
 
@@ -71,35 +71,30 @@ Apps installed with these dotfiles.
 
 *Accessories*
 
-- Albert - Quick Shortcut/Search Bar
-- Calculator*
-- Calendar*
-- Camera*
+- Camera* - WcbCam App
 - Files* - Filesystem Viewer
 - KeePassXC - Password Management
-- Music*
 - Photos* - Picture Viewer
-- Videos*
 
 *Education*
 
 - Anki - Flashcard Study Tool
-- Freemind - Mindmap Editor
 
 *Graphics*
 
-- GIMP - Pixel Graphics Editor
 - Inkscape - Vector Graphics Editor
+- Krita - Raster Graphics Editor 
+- Peek - Screen Record to Animated GIF
 - Screenshot* - Take Screenshots
 - TypeCatcher - Manage Google Fonts
 
 *Internet*
 
 - Brave - Advertisement blocking browser
+- Chrome - Web Browser
 - Chromium - Open Source Chrome
 - Discord - Internet Chat
 - Firefox - Web Browser
-- Google Chrome - Web Browser
 - Slack - Internet Chat
 - Transmission - Torrent Client
 
@@ -107,39 +102,35 @@ Apps installed with these dotfiles.
 
 - GitKraken - Git GUI
 - Postman - HTTP Request Builder
-- Sublime Text - Code Editor
-- Visual Studio Code - IDE
+- Sublime - Code Editor
+- VSCode - IDE
 
 *Sound & Video*
 
 - Audacity - Sound Recorder/Editor
 - OBS - Video Broadcasting
-- Screencast - Simple Screen Recorder
+- Screencast - Screen Recorder for MP4/WebM
 - Shotcut - Video Editor
 - Spotify - Music Player
 - VLC - Video Player
 
 *System Tools*
 
-- App Center*
-- DConf Editor - Advanced Settings Editor
+- AppCenter* - Official EOS Application Center
+- DConf - Advanced Settings Editor
 - Disks - Disk Utility
-- ElementaryOS Tweaks - Advanced shell settings
 - GParted - Partition Editor
 - Guake - Popup Terminal
-- Multitasking View*s
-- System Monitor - Resource Monitor
-- System Settings*
+- Monitor - System Resource Monitor
+- Settings*
 - Terminal*
 - Virtualbox - Virtual Machines
 
 ## CLI Applications
 
-- apidoc - REST API Doc Generator
 - aws - Amazon Web Services
-- cheat - Cheatsheets
-- circleci - Run Circle CI build jobs locally
 - docker - Container Tool
+- fnm - Fast Node Manager
 - fx - JSON viewer
 - git - DVCS
 - go - Go Language Runtime
@@ -147,15 +138,13 @@ Apps installed with these dotfiles.
 - live-server - Simple HTTP server w/ LiveReload
 - node - JavaScript Language Runtime
 - nodemon - Node Monitor
-- postgresql - SQL server
-- nvm - Node Version Manager
-- pip - Python Package Manager
+- psql - PostGre SQL server
 - python - Python Runtime
 - rclone - RSync for the cloud
 - ripit - CLI CD Ripper
 - tap-spec - Tap Test Formatter
 - tape - JS Unit Testing (outputs TAP)
 - tree - File Tree Viewer
+- typescript - The Typescript compiler
 - vagrant - Virtual Machine Automation
-- vue - Vue.js CLI
 - youtube-dl - YouTube Downloader

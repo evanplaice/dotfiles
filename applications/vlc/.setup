@@ -1,1 +1,1 @@
-sudo snap install vlc
+sudo flatpak install --noninteractive flathub org.videolan.VLC

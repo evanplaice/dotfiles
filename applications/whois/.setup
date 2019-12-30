@@ -1,1 +1,1 @@
-sudo apt-get -y install whois
+sudo apt install -y whois

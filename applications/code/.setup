@@ -1,1 +1,1 @@
-sudo snap install code --classic
+sudo flatpak install --noninteractive flathub com.visualstudio.code

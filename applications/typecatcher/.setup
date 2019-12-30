@@ -1,1 +1,1 @@
-sudo apt-get -y install typecatcher
+sudo apt install -y typecatcher

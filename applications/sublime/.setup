@@ -1,1 +1,1 @@
-sudo snap install sublime-text --classic
+sudo flatpak install --noninteractive flathub com.sublimetext.three

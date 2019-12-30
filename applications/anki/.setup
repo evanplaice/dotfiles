@@ -1,1 +1,1 @@
-sudo snap install anki-woodrow
+sudo flatpak install --noninteractive flathub net.ankiweb.Anki

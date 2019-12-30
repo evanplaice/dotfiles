@@ -1,1 +1,1 @@
-sudo snap install slack --classic
+sudo flatpak install --noninteractive com.slack.Slack

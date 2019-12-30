@@ -1,0 +1,1 @@
+sudo flatpak install --noninteractive com.uploadedlobster.peek

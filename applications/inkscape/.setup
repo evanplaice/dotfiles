@@ -1,1 +1,1 @@
-sudo snap install inkscape
+sudo flatpak install --noninteractive org.inkscape.Inkscape

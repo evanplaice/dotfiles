@@ -1,1 +1,1 @@
-sudo snap install gitkraken
+sudo flatpak install --noninteractive flathub com.axosoft.GitKraken

@@ -1,3 +1,0 @@
-sudo apt-get -y install gdebi
-wget https://hyper-updates.now.sh/download/linux_deb
-sudo gdebi linux_deb

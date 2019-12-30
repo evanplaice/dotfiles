@@ -1,1 +1,1 @@
-sudo snap install obs-studio
+sudo flatpak install --noninteractive flathub com.obsproject.Studio

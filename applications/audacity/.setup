@@ -1,1 +1,1 @@
-sudo snap install audacity
+sudo flatpak install --noninteractive flathub org.audacityteam.Audacity

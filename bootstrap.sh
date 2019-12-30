@@ -39,19 +39,6 @@ setup() {
 	fi
 }
 
-exports() {
-	cat .exports > ".temp/.exports"
-	find ./applications -name .exports | sort | xargs -I {} bash -c \
-	"echo '# {}' >> .temp/.exports; \
-	cat {} >> .temp/.exports; \
-	printf '\n\n' >> .temp/.exports"
-
-	if [[ $DRY = false ]]
-	then
-		cp -f ".temp/.exports" "$HOME/.exports"
-	fi
-}
-
 aliases() {
 	cat .aliases > ".temp/.aliases"
 	find ./applications -name .aliases | sort | xargs -I {} bash -c \
@@ -62,6 +49,7 @@ aliases() {
 	if [[ $DRY = false ]]
 	then
 		cp -f ".temp/.aliases" "$HOME/.aliases"
+		. "$HOME/.aliases"
 	fi
 }
 
@@ -72,7 +60,6 @@ profile() {
 		. "$HOME/.profile"
 	else
 		cp .profile .temp/.profile
-		. .profile
 	fi
 }
 
@@ -99,13 +86,15 @@ post() {
 
 		# clean up install files
 		sudo apt-get autoclean
+		
+		# restart
+		reboot
 	fi
 }
 
 pre
 setup
-exports
-aliases
 profile
+aliases
 config
 post

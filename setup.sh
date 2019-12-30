@@ -4,54 +4,70 @@
 # Pre-Install                                                                 #
 ###############################################################################
 
-	# enable bash strict mode
-	# set -eo pipefail
+# enable bash strict mode
+# set -eo pipefail
 
-	# force apt to run fully non-interactive 
-	DEBIAN_FRONTEND=noninteractive
-	# update sources
-	sudo apt-get update
+# force apt to run fully non-interactive 
+DEBIAN_FRONTEND=noninteractive
 
-	# upgrade existing packages (non-interactive hack)
-  sudo DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+# update
+sudo apt-get update
 
-	# C++ Runtime
-	sudo apt-get -y install libc++1
+# upgrade existing packages (non-interactive hack)
+sudo apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 
-	# Snap package manager
-	sudo apt-get -y install snapd
+# uninstall default programs
+sudo apt purge -y pantheon-calculator # calculator
+sudo apt purge -y maya-calendar # calendar
+sudo apt purge -y elementary.code # code
+sudo apt purge -y epiphany-browser epiphany-browser-data # epiphany
+sudo apt purge -y pantheon-mail # mail
+sudo apt purge -y noise # music
+sudo apt purge -y audience # videos
 
-  # Python package manager 
-  sudo apt-get -y install python-pip
+# c++ runtime
+sudo apt install -y libc++1
 
-  # Python 3 package manager (ie pip3)
-  sudo apt-get -y install python3-pip
+# snap package manager
+sudo apt install -y snapd
 
-  # Python distutils 
-  sudo apt-get -y install python3-distutils
+# add flathub to flatPak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-	# NVM (Node Version Manager)
-	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-	. $HOME/.nvm/nvm.sh
-	nvm install 12.8 2> /dev/null
+# fnm (fast node manager)
+curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+PATH=/home/vagrant/.fnm:$PATH
+eval "`fnm env --multi`"
+fnm install 13.2
+fnm use 13.2
 
-	# Update NPM (Node Package Manager)
-	npm i -g npm
+# update npm (node package manager)
+npm i -g npm
 
-	# Git
-	sudo apt-get -y install git
+# Install Go
+sudo snap install go --classic
+mkdir -p $HOME/.go/src
 
-	# allow non-default PPA sources (not included in Elementary OS)
-	sudo apt-get -y install software-properties-common
+# Git
+sudo apt install -y git
 
-	# set the Terminal to always run as a bash login shell
-	sudo touch /bin/bashlogin
-	sudo bash -c 'printf "#!/bin/sh\n\nexec bash --login" > /bin/bashlogin'
-	sudo chmod +x /bin/bashlogin
-	gsettings set io.elementary.terminal.settings shell 'bashlogin'
+# allow non-default PPA sources (not included in Elementary OS)
+sudo apt install -y software-properties-common
 
-  # load the inital profile
-	. .profile
+# set the Terminal to always run as a bash login shell
+sudo touch /bin/bashlogin
+sudo bash -c 'printf "#!/bin/sh\n\nexec bash --login" > /bin/bashlogin'
+sudo chmod +x /bin/bashlogin
+gsettings set io.elementary.terminal.settings shell 'bashlogin'
+
+# disable dynamic workspaces
+gsettings set org.pantheon.desktop.gala.behavior dynamic-workspaces false
+
+# set set num of workspaces to 5
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 5
+
+# install devilspie for auto workspaces management
+sudo apt install -y devilspie2 lua5.2
 
 ###############################################################################
 # Install                                                                     #

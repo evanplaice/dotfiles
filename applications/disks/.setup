@@ -1,1 +1,1 @@
-sudo apt-get -y install gnome-disk-utility
+sudo apt install -y gnome-disk-utility
