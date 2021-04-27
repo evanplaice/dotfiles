@@ -17,7 +17,6 @@ sudo apt-get update
 sudo apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" dist-upgrade
 
 # uninstall default programs
-sudo apt purge -y pantheon-calculator # calculator
 sudo apt purge -y maya-calendar # calendar
 sudo apt purge -y elementary.code # code
 sudo apt purge -y epiphany-browser epiphany-browser-data # epiphany
@@ -64,7 +63,7 @@ gsettings set io.elementary.terminal.settings shell 'bashlogin'
 gsettings set org.pantheon.desktop.gala.behavior dynamic-workspaces false
 
 # set set num of workspaces to 5
-gsettings set org.gnome.desktop.wm.preferences num-workspaces 5
+gsettings set org.gnome.desktop.wm.preferences num-workspaces 6
 
 # install devilspie for auto workspaces management
 sudo apt install -y devilspie2 lua5.2

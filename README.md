@@ -95,7 +95,6 @@ Apps installed with these dotfiles.
 - Chromium - Open Source Chrome
 - Discord - Internet Chat
 - Firefox - Web Browser
-- Slack - Internet Chat
 - Transmission - Torrent Client
 
 *Programming*
@@ -134,16 +133,12 @@ Apps installed with these dotfiles.
 - fx - JSON viewer
 - git - DVCS
 - go - Go Language Runtime
-- jest - JS Unit Testing (w/ DOM)
 - live-server - Simple HTTP server w/ LiveReload
 - node - JavaScript Language Runtime
 - nodemon - Node Monitor
-- psql - PostGre SQL server
 - python - Python Runtime
 - rclone - RSync for the cloud
 - ripit - CLI CD Ripper
-- tap-spec - Tap Test Formatter
-- tape - JS Unit Testing (outputs TAP)
 - tree - File Tree Viewer
 - typescript - The Typescript compiler
 - vagrant - Virtual Machine Automation
