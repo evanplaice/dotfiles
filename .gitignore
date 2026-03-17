@@ -1,4 +1,5 @@
 .temp/
 .vagrant/
+.DS_Store
 errors.log
 install.log
